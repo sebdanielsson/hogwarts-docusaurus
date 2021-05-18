@@ -48,12 +48,8 @@ module.exports = {
           ],
         },
         {
-          title: 'Community',
+          title: 'Hubz',
           items: [
-            {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
             {
               label: 'GitHub',
               href: 'https://github.com/SebDanielsson',
@@ -70,10 +66,6 @@ module.exports = {
             {
               label: 'Blog',
               to: '/',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
             },
           ],
         },
