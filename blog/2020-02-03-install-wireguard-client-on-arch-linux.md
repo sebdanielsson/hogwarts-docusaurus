@@ -1,5 +1,5 @@
 ---
-slug: install-wireguard-client-on-arch-linux
+slug: install-wireguard-on-arch-linux
 title: Install WireGuard [Client] on Arch Linux
 author: Sebastian
 author_title: Writer
@@ -19,8 +19,8 @@ This is a very basic tutorial on how to install WireGuard on Arch Linux to use i
 pacman -S wireguard-tools
 ```
 
-### Configure your first profile
-Below is an example for routing all traffic except local (192.168.1.*) through the VPN. If your local subnet is on e.g. 192.168.0.X
+### Configure your first tunnel
+Below is an example configfor routing all traffic except local (192.168.1.*) through the VPN. If your local subnet is on e.g. 192.168.0.X
 
 ```bash title="/etc/wireguard/wg0.conf"
 [Interface]
@@ -37,15 +37,15 @@ Endpoint = `PUBLICVPNSERVERIP>:<PORT>
 PersistentKeepalive = 25
   ```  
 
-## Running WireGuard
-Manually connect and check for errors:
+## Starting WireGuard
+Manually bring up the WireGuard interface and check for any errors.
 
 ```bash
 systemctl start wg-quick@wg0
 systemctl status wg-quick@wg0
 ```
 
-Auto connect on boot using systemd:
+You may want to bring up the interface automatically as a service with systemd.
 
 ```bash
 systemctl enable wg-quick@wg0
