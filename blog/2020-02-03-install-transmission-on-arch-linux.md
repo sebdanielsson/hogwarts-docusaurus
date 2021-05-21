@@ -79,4 +79,4 @@ systemctl enable transmission.service
 
 ## Bonus
 
-You can make Transmission Web UI remotely accessible by either connecting to your LAN with [WireGuard](/install-wireguard-on-arch-linux/) or by making the Web UI accessible on the internet over HTTPS with [NGINX](/install-nginx-on-arch-linux/) reverse proxy.
+You can make Transmission Web UI remotely accessible by either connecting to your LAN with [WireGuard](/install-wireguard-client-on-arch-linux/) or by making the Web UI accessible on the internet over HTTPS with [NGINX](/install-nginx-on-arch-linux/) reverse proxy.
