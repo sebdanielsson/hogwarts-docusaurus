@@ -15,39 +15,38 @@ This is a very basic tutorial on how to install WireGuard on Arch Linux to use i
 <!--truncate-->
 
 ## Installation
-
-    pacman -S wireguard-tools
-    
+```bash
+pacman -S wireguard-tools
+```
 
 ### Configure your first profile
+Below is an example for routing all traffic except local (192.168.1.*) through the VPN. If your local subnet is on e.g. 192.168.0.X
 
-    nano /etc/wireguard/wg0.conf
-    
+```bash title="/etc/wireguard/wg0.conf"
+[Interface]
+PrivateKey = `PRIVATEKEY`
+Address = `IPV4FROMVPNPROVIDER`,`IPV6FROMVPNPROVIDER`
+DNS = `VPNDNS6`,`VPNDNS4`
+PostUp = ip route add 192.168.1.0/24 via 192.168.1.1;
+PreDown = ip route delete 192.168.1.0/24;
 
-Example for routing most traffic except local through the VPN:
-
-    [Interface]
-    PrivateKey = <PRIVATEKEY>
-    Address = <LOCALIPV4>,<LOCALIPV6>
-    DNS = <VPNDNS>
-    PostUp = ip route add 192.168.1.0/24 via 192.168.1.1; ip route add 10.9.0.0/24 via 192.168.1.1;
-    
-    PreDown = ip route delete 192.168.1.0/24; ip route delete 10.9.0.0/24;
-    
-    [Peer]
-    PublicKey = <PUBLICKEY>
-    AllowedIPs = 0.0.0.0/0,::0/0
-    Endpoint = <PUBLICVPNSERVERIP>:<PORT>
-    PersistentKeepalive = 25
-    
+[Peer]
+PublicKey = `PUBLICKEY`
+AllowedIPs = 0.0.0.0/0,::0/0
+Endpoint = `PUBLICVPNSERVERIP>:<PORT>
+PersistentKeepalive = 25
+  ```  
 
 ## Running WireGuard
-
 Manually connect and check for errors:
 
-    systemctl start wg-quick@wg0
-    systemctl status wg-quick@wg0
+```bash
+systemctl start wg-quick@wg0
+systemctl status wg-quick@wg0
+```
 
 Auto connect on boot using systemd:
 
-    systemctl enable wg-quick@wg0
+```bash
+systemctl enable wg-quick@wg0
+```
