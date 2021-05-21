@@ -4,11 +4,11 @@ title: Install tmux on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
+author_image_url: img/sebastian.webp
 tags: [tmux, terminal, multiplexer, arch, linux, tutorial, guide]
 ---
 
-![tmux-macos](https://hogwarts.zone/content/images/2021/02/tmux-macos.jpg)
+![tmux-macos](/img/tmux.webp)
 
 Tmux is a terminal multiplexer. This lets you to run multiple terminal sessions simultaniously thus running multiple programs at the same time. And more importantly, this enables you to complete system updates even after a broken SSH connection since terminal sessions can be resumed.
 

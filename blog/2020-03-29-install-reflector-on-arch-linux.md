@@ -4,11 +4,11 @@ title: Install Reflector on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
+author_image_url: img/sebastian.webp
 tags: [reflector, pacman, mirrors, python, arch, linux, tutorial, guide]
 ---
 
-![server-rack](https://hogwarts.zone/content/images/2020/05/server-rack.jpg)
+![server-rack](/img/server-rack.webp)
 
 Reflector is a small Python3 script that sort through the Arch Linux mirrors based on parameters of your choice and updates your mirrorlist.
 

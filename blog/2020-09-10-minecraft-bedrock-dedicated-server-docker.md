@@ -4,11 +4,11 @@ title: Start a Minecraft Bedrock Server using Docker
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
+author_image_url: img/sebastian.webp
 tags: [docker, container, compose, minecraft, bedrock, dedicated, server, linux, tutorial, guide]
 ---
 
-![minecraft-docker](https://hogwarts.zone/content/images/2020/09/minecraft-docker.jpg)
+![minecraft-docker](/img/minecraft-docker.webp)
 
 This guide will show you how to start a Minecraft Bedrock dedicated server using Docker.
 

@@ -4,11 +4,11 @@ title: Install Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
+author_image_url: img/sebastian.webp
 tags: [arch, linux, install, tutorial, guide]
 ---
 
-![arch-linux](https://hogwarts.zone/content/images/2020/02/arch-linux.jpg)
+![arch-linux](/img/arch-linux.webp)
 
 This is my personal step-by-step guide for installing Arch Linux on x86-64 UEFI based machines. This guide is a slimmed down and simplified version of the [Installation guide](https://wiki.archlinux.org/index.php/Installation_guide) on ArchWiki.
 

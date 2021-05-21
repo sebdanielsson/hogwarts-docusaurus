@@ -6,7 +6,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/hogwarts-icon-dark.webp',
   organizationName: 'SebDanielsson', // Usually your GitHub org/user name.
   projectName: 'hogwarts-docusaurus', // Usually your repo name.
   themeConfig: {
@@ -16,8 +16,8 @@ module.exports = {
     navbar: {
       title: 'Hogwarts',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/hogwarts-icon.png',
+        alt: 'Hogwarts Logo',
+        src: 'img/hogwarts-icon-dark.webp',
       },
       items: [
         {to: '/', label: 'Blog', position: 'left'},
@@ -28,11 +28,11 @@ module.exports = {
           position: 'left',
           label: 'Docs',
         },
-        {
-          href: 'https://github.com/sebdanielsson',
-          label: 'GitHub',
-          position: 'right',
-        },
+        //{
+        //  href: 'https://github.com/sebdanielsson',
+        //  label: 'GitHub',
+        //  position: 'right',
+        //},
       ],
     },
     footer: {
@@ -85,7 +85,7 @@ module.exports = {
         },
         blog: {
           routeBasePath: '/',
-          showReadingTime: true,
+          showReadingTime: false,
           // Please change this to your repo.
           editUrl:
             'https://github.com/SebDanielsson/hogwarts-docusaurus/edit/main/',
