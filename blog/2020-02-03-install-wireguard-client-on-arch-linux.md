@@ -20,6 +20,8 @@ pacman -S wireguard-tools
 ```
 
 ### Configure your first tunnel
+In this tutorial we'll use wg0 as the name for our WireGuard interface. If you already have a WireGuard configuration named wg0, make sure to use another name for this configuration.
+
 Below is an example configfor routing all traffic except local (192.168.1.*) through the VPN. If your local subnet is on e.g. 192.168.0.X
 
 ```bash title="/etc/wireguard/wg0.conf"

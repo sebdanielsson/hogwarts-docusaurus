@@ -28,7 +28,10 @@ makepkg -si
 | Command      | Function                                          |
 | ------------ | ------------------------------------------------- |
 | paru -Ss foo | Searches for package foo on the repos or the AUR. |
+| paru -Si foo | Get information about a package.                  |
 | paru -S foo  | Installs package foo from the repos or the AUR.   |
+| paru -d foo  | Remove a package from the local repo.             |
 | paru -Syu    | Update package list and upgrade all installed repo and AUR packages. |
 | paru -Sua    | Update all currently installed AUR packages.      |
 | paru -Qua    | Print available AUR updates.                      |
+| paru -c      | Uninstall unneeded dependencies.                  |
