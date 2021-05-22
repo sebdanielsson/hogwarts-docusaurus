@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
 tags: [wireguard, server, vpn, arch, linux, tutorial, guide]
 ---
 
-![server-rack](/img/wireguard.webp)
+![wireguard](/img/wireguard.webp)
 
 This is a very basic tutorial on how to install WireGuard on Arch Linux to use it as a VPN server. For example if you want to access your home LAN from remote locations.
 

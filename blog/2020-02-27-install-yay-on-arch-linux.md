@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
 tags: [yay, aur, aur helper, arch, linux, tutorial, guide]
 ---
 
-![server-rack](/img/yay.webp)
+![yay](/img/yay.webp)
 
 This guide will walk through the steps for installing yay (Yet another Yogurt) which is an AUR Helper. This will let you install packages from the AUR (Arch User Repository) in the same way you install packages from the Arch Repo with pacman.
 

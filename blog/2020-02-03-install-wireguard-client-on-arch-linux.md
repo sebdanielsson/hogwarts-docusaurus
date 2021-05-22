@@ -8,7 +8,7 @@ author_image_url: img/sebastian.webp
 tags: [wireguard, vpn, arch, linux, tutorial, guide]
 ---
 
-![transmission](/img/wireguard.webp)
+![wireguard](/img/wireguard.webp)
 
 This is a very basic tutorial on how to install WireGuard on Arch Linux to use it as a VPN client. For example if you need maximum privacy while [torrenting](/install-transmission-on-arch-linux/) your favorite Linux distros.
 

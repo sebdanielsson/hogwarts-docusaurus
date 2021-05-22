@@ -8,7 +8,7 @@ author_image_url: img/sebastian.webp
 tags: [tmux, terminal, multiplexer, arch, linux, tutorial, guide]
 ---
 
-![tmux-macos](/img/tmux.webp)
+![tmux](/img/tmux.webp)
 
 Tmux is a terminal multiplexer. This lets you to run multiple terminal sessions simultaniously thus running multiple programs at the same time. And more importantly, this enables you to complete system updates even after a broken SSH connection since terminal sessions can be resumed.
 

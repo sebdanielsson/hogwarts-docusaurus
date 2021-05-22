@@ -8,7 +8,7 @@ author_image_url: img/sebastian.webp
 tags: [nginx, reverse proxy, arch, linux, tutorial, guide]
 ---
 
-![transmission](/img/nginx.webp)
+![nginx](/img/nginx.webp)
 
 Fast and easy tutorial for installing a NGINX web server with HTTP/2 and TLS certificates from Let's Encrypt on Arch Linux.
 
@@ -24,15 +24,6 @@ The default page served at [http://127.0.0.1](http://127.0.0.1) is located at `/
 ## Configuration
 DigitalOcean has provided a tool for configuring your web server over at 
 [nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
-
-#### “Could not build optimal types_hash” error**
-
-As of this date 2020-02-05 NGINX hasn't been patched to solve this error on Arch. This can be fixed:
-
-```nginx title="/etc/nginx/nginx.conf"
-types_hash_max_size 4096;
-server_names_hash_bucket_size 128;
-```
 
 #### Disable the default site
 If you want to disable the default site and create a new one, instead of adding your site to the default webroot, you can disable it by removing the symlink.
@@ -67,8 +58,17 @@ Persistent=true
 WantedBy=timers.target
 ```
 
-**Start and enable the service**
+#### Start and enable the service
 ```shell
 systemctl start certbot.timer
 systemctl enable certbot.timer
 ```
+
+### Run NGINX
+```shell
+systemctl start nginx
+systemctl enable nginx
+```
+
+### Live
+Your website should now be live at https://`yourdomain.com`

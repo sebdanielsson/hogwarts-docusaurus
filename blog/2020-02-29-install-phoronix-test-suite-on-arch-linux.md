@@ -8,7 +8,7 @@ author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
 tags: [phoronix test suite, pts, benchmark, arch, linux, tutorial, guide]
 ---
 
-![server-rack](/img/pts.webp)
+![pts](/img/pts.webp)
 
 This guide will walk through the steps for installing the [Phoronix Test Suite](https://www.phoronix-test-suite.com/) on Arch Linux. The software will be installed from the [Arch User Repository (AUR)](https://aur.archlinux.org/) with the help of the [AUR Helper](https://wiki.archlinux.org/index.php/AUR_helpers)*yay*. If you don't have an AUR Helper you should definately install one. I have a guide for two of them: [Install yay on Arch Linux](/install-yay-on-arch-linux) & [Install paru on Arch Linux](/install-paru-on-arch-linux).
 
