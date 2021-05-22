@@ -13,7 +13,7 @@ tags: [yay, aur, aur helper, arch, linux, tutorial, guide]
 This guide will walk through the steps for installing yay (Yet another Yogurt) which is an AUR Helper. This will let you install packages from the AUR (Arch User Repository) in the same way you install packages from the Arch Repo with pacman.
 
 Update 2021-05-21:
-There is a new AUR Helper that has got a lot of traction. It's called paru and works mostly the same but is written in Rust! [I have a guide for installing it as well](/paru-on-arch-linux.md).
+There is a new AUR Helper that has got a lot of traction. It's called paru and works mostly the same but is written in Rust! [I have a guide for installing it as well](/install-paru-on-arch-linux.md).
 
 <!--truncate-->
 

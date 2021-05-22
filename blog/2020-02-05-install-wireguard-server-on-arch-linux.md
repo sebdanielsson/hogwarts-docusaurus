@@ -1,6 +1,6 @@
 ---
 slug: install-wireguard-server-on-arch-linux
-title: Install Ghost with NGINX on Arch Linux
+title: Install WireGuard [Server] on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
@@ -19,7 +19,7 @@ This is a very basic tutorial on how to install WireGuard on Arch Linux to use i
 pacman -S wireguard-tools
 ```
 
-## Configuring
+## Configuration
 In this tutorial we'll use wg0 as the name for our WireGuard interface. If you already have a WireGuard configuration named wg0, make sure to use another name for this configuration.
 
 ### Server configuration
@@ -36,7 +36,7 @@ Print the keys and copy them for the following configuration.
 cat server1-privatekey && cat server1-publickey
 ```
 
-```toml title="/etc/wireguard/wg0.conf"
+```title="/etc/wireguard/wg0.conf"
 [Interface]
 PrivateKey = <SERVER_PRIVATE_KEY>
 Address = 10.0.2.1/24
@@ -70,7 +70,7 @@ Print the keys and copy them for the following configuration.
 cat peer1-privatekey && cat peer1-publickey
 ```
 
-```toml title="/etc/wireguard/wg0-peer1.conf"
+```title="/etc/wireguard/wg0-peer1.conf"
 [Interface]
 PrivateKey = <PEER1_PRIVATE_KEY>
 Address = 10.0.2.2/32
@@ -90,7 +90,7 @@ Print the keys and copy them for the following configuration.
 cat peer2-privatekey && cat peer2-publickey
 ```
 
-```toml title="/etc/wireguard/wg0-peer2.conf"
+```title="/etc/wireguard/wg0-peer2.conf"
 [Interface]
 PrivateKey = <PEER2_PRIVATE_KEY>
 Address = 10.0.2.3/32
