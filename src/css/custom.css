@@ -24,6 +24,7 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
+# Hogwarts custom
 html[data-theme=dark] {
   --ifm-background-color : #020c1b;
   --ifm-background-surface-color: #020c1b;
