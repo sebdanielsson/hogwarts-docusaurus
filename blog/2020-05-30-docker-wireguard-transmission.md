@@ -4,7 +4,7 @@ title: Run WireGuard & Transmission in a Docker Container
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: https://avatars.githubusercontent.com/u/20663065?v=4
+author_image_url: /img/sebastian.webp
 tags: [docker, container, transmission, wireguard, vpn, linux, tutorial, guide]
 ---
 
