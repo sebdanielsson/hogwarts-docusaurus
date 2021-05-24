@@ -4,7 +4,7 @@ title: Install paru on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: img/sebastian.webp
+author_image_url: /img/sebastian.webp
 tags: [paru, aur, aur helper, rust, arch, linux, tutorial, guide]
 ---
 
