@@ -1,5 +1,5 @@
 ---
-slug: install-wireguard-on-arch-linux
+slug: install-wireguard-client-on-arch-linux
 title: Install WireGuard [Client] on Arch Linux
 author: Sebastian
 author_title: Writer
