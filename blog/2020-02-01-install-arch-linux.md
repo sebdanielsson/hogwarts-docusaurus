@@ -4,7 +4,7 @@ title: Install Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: img/sebastian.webp
+author_image_url: /img/sebastian.webp
 tags: [arch, linux, install, tutorial, guide]
 ---
 
