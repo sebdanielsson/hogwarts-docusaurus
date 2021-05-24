@@ -1,5 +1,5 @@
 ---
-slug: install-tmux-on-arch-linux
+slug: install-tmux-on-linux
 title: Install tmux on Arch Linux
 author: Sebastian
 author_title: Writer
