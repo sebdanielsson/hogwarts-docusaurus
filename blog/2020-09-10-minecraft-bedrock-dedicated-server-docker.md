@@ -4,7 +4,7 @@ title: Start a Minecraft Bedrock Server using Docker
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
-author_image_url: img/sebastian.webp
+author_image_url: /img/sebastian.webp
 tags: [docker, container, compose, minecraft, bedrock, dedicated, server, linux, tutorial, guide]
 ---
 
