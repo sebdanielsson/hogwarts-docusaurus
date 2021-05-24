@@ -23,3 +23,28 @@
   margin: 0 calc(-1 * var(--ifm-pre-padding));
   padding: 0 var(--ifm-pre-padding);
 }
+
+# Hogwarts custom
+html[data-theme=dark] {
+  --ifm-background-color : #020c1b;
+  --ifm-background-surface-color: #020c1b;
+  --ifm-color-primary: #bd93f9;
+}
+
+[data-theme=dark] .footer--dark {
+  --ifm-footer-background-color: #01070F;
+}
+
+html[data-theme=light] {
+  --ifm-background-color : #ffffff;
+  --ifm-background-surface-color: #ffffff;
+  --ifm-color-primary: #6845A2;
+}
+
+[data-theme=light] .footer--dark {
+  --ifm-footer-background-color: #495670;
+}
+
+[data-theme=light] .footer__link-item:hover {
+  color: #ffffff;
+}
