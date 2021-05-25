@@ -10,6 +10,10 @@ module.exports = {
   organizationName: 'SebDanielsson', // Usually your GitHub org/user name.
   projectName: 'hogwarts-docusaurus', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      defaultMode: 'dark',
+      respectPrefersColorScheme: true,
+    },
     prism: {
       theme: require('prism-react-renderer/themes/dracula'),
       additionalLanguages: ['nginx'],
