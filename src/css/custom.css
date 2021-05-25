@@ -7,13 +7,13 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #bd93f9;
+  --ifm-color-primary-dark: #a66df7;
+  --ifm-color-primary-darker: #9b5bf6;
+  --ifm-color-primary-darkest: #7822f3;
+  --ifm-color-primary-light: #d4b9fb;
+  --ifm-color-primary-lighter: #dfcbfc;
+  --ifm-color-primary-lightest: #ffffff;
   --ifm-code-font-size: 95%;
 }
 
@@ -24,27 +24,23 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-# Hogwarts custom
 html[data-theme=dark] {
-  --ifm-background-color : #020c1b;
+  --ifm-background-color: #020c1b;
   --ifm-background-surface-color: #020c1b;
-  --ifm-color-primary: #bd93f9;
 }
 
-[data-theme=dark] .footer--dark {
-  --ifm-footer-background-color: #01070F;
+html[data-theme=dark] .footer {
+  --ifm-footer-background-color: #020c1b;
 }
 
 html[data-theme=light] {
   --ifm-background-color : #ffffff;
   --ifm-background-surface-color: #ffffff;
-  --ifm-color-primary: #6845A2;
-}
-
-[data-theme=light] .footer--dark {
-  --ifm-footer-background-color: #495670;
-}
-
-[data-theme=light] .footer__link-item:hover {
-  color: #ffffff;
+  --ifm-color-primary: #6845a2;
+  --ifm-color-primary-dark: #5e3e92;
+  --ifm-color-primary-darker: #583b8a;
+  --ifm-color-primary-darkest: #493071;
+  --ifm-color-primary-light: #724cb2;
+  --ifm-color-primary-lighter: #7954b6;
+  --ifm-color-primary-lightest: #8c6cc0;
 }

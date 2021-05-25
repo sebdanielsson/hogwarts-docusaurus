@@ -37,7 +37,7 @@ module.exports = {
       ],
     },
     footer: {
-      style: 'dark',
+      style: 'light',
       links: [
         {
           title: 'Docs',
@@ -73,6 +73,13 @@ module.exports = {
       ],
       copyright: `Copyright © ${new Date().getFullYear()} Hogwarts.zone - Built with Docusaurus.`,
     },
+    //algolia: {
+    //  apiKey: '',
+    //  indexName: '',
+
+      // Optional: Algolia search parameters
+      //searchParameters: {},
+    //},
   },
   presets: [
     [
