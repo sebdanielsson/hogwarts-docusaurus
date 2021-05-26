@@ -26,13 +26,14 @@ module.exports = {
       },
       items: [
         {to: '/', label: 'Blog', position: 'left'},
-        {to: '/landingpage', label: 'Landingpage', position: 'left'},
-        {
-          type: 'doc',
-          docId: 'intro',
-          position: 'left',
-          label: 'Docs',
-        },
+        {to: '/contact', label: 'Contact', position: 'left'},
+        //{to: '/landingpage', label: 'Landingpage', position: 'left'},
+        //{
+        //  type: 'doc',
+        //  docId: 'intro',
+        //  position: 'left',
+        //  label: 'Docs',
+        //},
         //{
         //  href: 'https://github.com/sebdanielsson',
         //  label: 'GitHub',
