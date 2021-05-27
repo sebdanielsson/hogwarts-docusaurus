@@ -25,7 +25,8 @@ input {
   font-size: 1.1rem;
   padding: .7rem;
   margin-bottom: .5rem;
-  width: 30%;
+  width: 100%;
+  max-width: 24rem;
 }
 
 textarea {
@@ -37,7 +38,8 @@ textarea {
   font-size: 1.1rem;
   padding: .7rem;
   margin-bottom: .5rem;
-  width: 30%;
+  width: 100%;
+  max-width: 24rem;
   height: 15rem;
 }
 
