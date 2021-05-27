@@ -41,43 +41,6 @@ module.exports = {
         },
       ],
     },
-    footer: {
-      style: 'light',
-      links: [
-        {
-          title: 'Docs',
-          items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
-          ],
-        },
-        {
-          title: 'Hubz',
-          items: [
-            {
-              label: 'GitHub',
-              href: 'https://github.com/SebDanielsson',
-            },
-            {
-              label: 'Docker Hub',
-              href: 'https://hub.docker.com/u/sebdanielsson',
-            },
-          ],
-        },
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: '/',
-            },
-          ],
-        },
-      ],
-      //copyright: `Copyright © ${new Date().getFullYear()} Hogwarts.zone - Built with Docusaurus.`,
-    },
   },
   presets: [
     [
