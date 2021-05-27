@@ -29,16 +29,16 @@ module.exports = {
         {to: '/contact', label: 'Contact', position: 'left'},
         //{to: '/landingpage', label: 'Landingpage', position: 'left'},
         //{
-        //  type: 'doc',
-        //  docId: 'intro',
-        //  position: 'left',
-        //  label: 'Docs',
+          //type: 'doc',
+          //docId: 'intro',
+          //position: 'left',
+          //label: 'Docs',
         //},
-        //{
-        //  href: 'https://github.com/sebdanielsson',
-        //  label: 'GitHub',
-        //  position: 'right',
-        //},
+        {
+          href: 'https://github.com/sebdanielsson',
+          label: 'GitHub',
+          position: 'right',
+        },
       ],
     },
     footer: {
@@ -76,15 +76,8 @@ module.exports = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Hogwarts.zone - Built with Docusaurus.`,
+      //copyright: `Copyright © ${new Date().getFullYear()} Hogwarts.zone - Built with Docusaurus.`,
     },
-    //algolia: {
-    //  apiKey: '',
-    //  indexName: '',
-
-      // Optional: Algolia search parameters
-      //searchParameters: {},
-    //},
   },
   presets: [
     [

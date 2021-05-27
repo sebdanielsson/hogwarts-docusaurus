@@ -17,7 +17,7 @@ html[data-theme=light] input, html[data-theme=light] textarea {
   color: var(--ifm-color-gray-900);
 }
 
-input {
+.input {
   display: block;
   margin: 0px auto;
   border: 0;
@@ -29,7 +29,7 @@ input {
   max-width: 24rem;
 }
 
-textarea {
+.textarea {
   display: block;
   margin: 0px auto;
   border: 0;
@@ -43,8 +43,8 @@ textarea {
   height: 15rem;
 }
 
-button {background-image: linear-gradient(to right, #5e3e92 0%, #7954b6  51%, #5e3e92  100%)}
-button {
+.button {background-image: linear-gradient(to right, #5e3e92 0%, #7954b6  51%, #5e3e92  100%)}
+.button {
    display: block;
    margin: 0px auto;
    margin-bottom: .5rem;
@@ -59,13 +59,13 @@ button {
    color: white;
  }
 
-button:hover {
+.button:hover {
   background-position: right center; /* change the direction of the change here */
   color: #fff;
   text-decoration: none;
  }
 
- button:focus {
+ .button:focus {
   animation-duration: 1s;
   animation-name: buttonfocus;
   animation-iteration-count: infinite;

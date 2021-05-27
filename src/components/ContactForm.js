@@ -18,11 +18,11 @@ function ContactForm() {
     <section className={styles.features}>
       <div className="container">
         <form onSubmit={handleSubmit}>
-          <input id="email" type="email" name="email" placeholder="Email" />
+          <input className={styles.input} id="email" type="email" name="email" placeholder="Email" />
           <ValidationError prefix="Email" field="email" errors={state.errors} />
-          <textarea id="message" name="message" placeholder="Message" />
+          <textarea className={styles.textarea} id="message" name="message" placeholder="Message" />
           <ValidationError prefix="Message" field="message" errors={state.errors} />
-          <button type="submit" disabled={state.submitting}>Submit</button>
+          <button className={styles.button} type="submit" disabled={state.submitting}>Submit</button>
         </form>
       </div>
     </section>
