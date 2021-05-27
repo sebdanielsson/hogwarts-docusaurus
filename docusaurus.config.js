@@ -68,7 +68,7 @@ module.exports = {
   scripts: [
     {
       src:
-        'https://stats.hogwarts.zone/js/index.js',
+        'https://plausible.hogwarts.zone/js/plausible.js',
       async: true,
     },
   ],
