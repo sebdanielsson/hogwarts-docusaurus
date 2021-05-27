@@ -65,4 +65,11 @@ module.exports = {
       },
     ],
   ],
+  scripts: [
+    {
+      src:
+        'https://stats.hogwarts.zone/js/index.js',
+      async: true,
+    },
+  ],
 };
