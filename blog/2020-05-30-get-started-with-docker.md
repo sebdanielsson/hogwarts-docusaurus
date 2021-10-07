@@ -41,8 +41,9 @@ docker info
 | Switch to container shell  | docker exec -ti `container` /bin/sh                   |
 | Exit container shell       | exit                                                  |
 | Build image                | docker build --no-cache -t `username`/`image`:`tag` . |
-| Docker stats               | docker stats                                          |
+| Delete stopped containers, networks, images and build cache | docker system prune -a |
 
+docker volume prune
 
 #### Docker Compose update images
 If you're using Docker compose and want to update the images to the latest versions you can run the following when in the same directroy as `docker-compose.yaml`
