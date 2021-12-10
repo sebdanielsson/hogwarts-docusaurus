@@ -17,6 +17,7 @@
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.11",
     "@docusaurus/preset-classic": "2.0.0-beta.11",
+    "@docusaurus/utils-common": "^2.0.0-beta.12",
     "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.2.1",
@@ -25,7 +26,6 @@
     "@formspree/react": "^2.2.4"
   },
   "devDependencies": {
-    "@docusaurus/utils-common": "^2.0.0-beta.12",
     "@docusaurus/module-type-aliases": "2.0.0-beta.11",
     "@tsconfig/docusaurus": "^1.0.4",
     "typescript": "^4.5.2"
