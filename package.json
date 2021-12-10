@@ -1,6 +1,6 @@
 {
   "name": "hogwarts-docusaurus",
-  "version": "2.0.0-beta.11",
+  "version": "0.0.0",
   "private": true,
   "scripts": {
     "docusaurus": "docusaurus",
@@ -13,22 +13,21 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "watch": "tsc --watch"
+    "@formspree/react": "^2.2.4" // Added by Sebastian for contact form
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.11",
-    "@docusaurus/plugin-client-redirects": "2.0.0-beta.11",
-    "@docusaurus/plugin-ideal-image": "2.0.0-beta.11",
-    "@docusaurus/plugin-pwa": "2.0.0-beta.11",
     "@docusaurus/preset-classic": "2.0.0-beta.11",
-    "@docusaurus/remark-plugin-npm2yarn": "2.0.0-beta.11",
-    "@docusaurus/theme-live-codeblock": "2.0.0-beta.11",
-    "@docusaurus/utils": "2.0.0-beta.11",
-    "@popperjs/core": "^2.10.2",
-    "@formspree/react": "^2.2.4",
+    "@mdx-js/react": "^1.6.21",
     "clsx": "^1.1.1",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "prism-react-renderer": "^1.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "2.0.0-beta.11",
+    "@tsconfig/docusaurus": "^1.0.4",
+    "typescript": "^4.5.2"
   },
   "browserslist": {
     "production": [
