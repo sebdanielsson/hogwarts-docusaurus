@@ -12,8 +12,7 @@
     "serve": "docusaurus serve",
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
-    "typecheck": "tsc",
-    "@formspree/react": "^2.2.4" // Added by Sebastian for contact form
+    "typecheck": "tsc"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-beta.11",
@@ -22,7 +21,8 @@
     "clsx": "^1.1.1",
     "prism-react-renderer": "^1.2.1",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "@formspree/react": "^2.2.4" // Added by Sebastian for contact form
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "2.0.0-beta.11",
