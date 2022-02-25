@@ -1,12 +1,13 @@
 ---
 slug: get-started-with-docker
-title: Get started with Docker
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [docker, container, arch, linux, tutorial, guide]
 ---
+
+# Get started with Docker
 
 ![docker](/img/docker.webp)
 

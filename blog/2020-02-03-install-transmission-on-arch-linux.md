@@ -1,12 +1,13 @@
 ---
 slug: install-transmission-on-arch-linux
-title: Install Transmission on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [transmission, arch, linux, tutorial, guide]
 ---
+
+# Install Transmission on Arch Linux
 
 ![transmission](/img/transmission.webp)
 

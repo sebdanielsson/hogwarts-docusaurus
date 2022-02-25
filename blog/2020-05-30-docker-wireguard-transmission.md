@@ -1,12 +1,13 @@
 ---
 slug: docker-wireguard-transmission
-title: Run WireGuard & Transmission in a Docker Container
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [docker, container, transmission, wireguard, vpn, linux, tutorial, guide]
 ---
+
+# Run WireGuard & Transmission in a Docker Container
 
 ![docker-wireguard-transmission](/img/docker-wireguard-transmission.webp)
 

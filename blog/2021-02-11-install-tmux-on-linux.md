@@ -1,12 +1,13 @@
 ---
 slug: install-tmux-on-linux
-title: Install tmux on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [tmux, terminal, multiplexer, arch, linux, tutorial, guide]
 ---
+
+# Install tmux on Arch Linux
 
 ![tmux](/img/tmux.webp)
 

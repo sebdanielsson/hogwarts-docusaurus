@@ -1,12 +1,13 @@
 ---
 slug: install-wireguard-server-on-arch-linux
-title: Install WireGuard [Server] on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [wireguard, server, vpn, arch, linux, tutorial, guide]
 ---
+
+# Install WireGuard [Server] on Arch Linux
 
 ![wireguard](/img/wireguard.webp)
 

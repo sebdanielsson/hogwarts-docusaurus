@@ -1,12 +1,13 @@
 ---
 slug: install-phoronix-test-suite-on-arch-linux
-title: Install Phoronix Test Suite on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [phoronix test suite, pts, benchmark, arch, linux, tutorial, guide]
 ---
+
+# Install Phoronix Test Suite on Arch Linux
 
 ![pts](/img/pts.webp)
 
