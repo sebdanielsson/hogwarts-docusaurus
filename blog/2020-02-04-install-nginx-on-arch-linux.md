@@ -34,6 +34,7 @@ rm /etc/nginx/sites-enabled/default
 ## Automatically renew the certificates
 
 #### Create a systemd service
+
 ```title="/etc/systemd/system/certbot.service"
 [Unit]
 Description=Let’s Encrypt renewal
@@ -45,7 +46,8 @@ ExecStart=/usr/bin/certbot renew —quiet —agree-tos —deploy-hook “systemc
 
 #### Create a timer
 Make it run twice a day at random times to help reduce load on Let's Encrypt servers
-```title="/etc/systemd/system/certbot.timer"
+
+```systemd title="/etc/systemd/system/certbot.timer"
 [Unit]
 Description=Twice daily renewal of Let’s Encrypt’s certificates
 
@@ -59,12 +61,14 @@ WantedBy=timers.target
 ```
 
 #### Start and enable the service
+
 ```shell
 systemctl start certbot.timer
 systemctl enable certbot.timer
 ```
 
 ### Run NGINX
+
 ```shell
 systemctl start nginx
 systemctl enable nginx
