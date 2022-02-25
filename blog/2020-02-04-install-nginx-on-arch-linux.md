@@ -15,6 +15,7 @@ Fast and easy tutorial for installing a NGINX web server with HTTP/2 and TLS cer
 <!--truncate-->
 
 ## Installation
+
 ```shell
 pacman -S nginx-mainline certbot certbot-nginx
 ```
@@ -22,20 +23,23 @@ pacman -S nginx-mainline certbot certbot-nginx
 The default page served at [http://127.0.0.1](http://127.0.0.1) is located at `/usr/share/nginx/html/index.html`.
 
 ## Configuration
+
 DigitalOcean has provided a tool for configuring your web server over at 
 [nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
 
-#### Disable the default site
+### Disable the default site
+
 If you want to disable the default site and create a new one, instead of adding your site to the default webroot, you can disable it by removing the symlink.
+
 ```shell
 rm /etc/nginx/sites-enabled/default
 ```
 
 ## Automatically renew the certificates
 
-#### Create a systemd service
+### Create a systemd service
 
-```title="/etc/systemd/system/certbot.service"
+```systemd title="/etc/systemd/system/certbot.service"
 [Unit]
 Description=Let’s Encrypt renewal
 
@@ -44,7 +48,8 @@ Type=oneshot
 ExecStart=/usr/bin/certbot renew —quiet —agree-tos —deploy-hook “systemctl reload nginx.service”
 ```
 
-#### Create a timer
+### Create a timer
+
 Make it run twice a day at random times to help reduce load on Let's Encrypt servers
 
 ```systemd title="/etc/systemd/system/certbot.timer"
@@ -60,19 +65,19 @@ Persistent=true
 WantedBy=timers.target
 ```
 
-#### Start and enable the service
+### Start and enable the service
 
 ```shell
 systemctl start certbot.timer
 systemctl enable certbot.timer
 ```
 
-### Run NGINX
+## Run NGINX
 
 ```shell
 systemctl start nginx
 systemctl enable nginx
 ```
 
-### Live
+## Live
 Your website should now be live at https://`yourdomain.com`
