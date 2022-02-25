@@ -1,12 +1,13 @@
 ---
 slug: install-nginx-on-arch-linux
-title: Install NGINX on Arch Linux
 author: Sebastian
 author_title: Writer
 author_url: https://github.com/SebDanielsson
 author_image_url: /img/sebastian.webp
 tags: [nginx, reverse proxy, arch, linux, tutorial, guide]
 ---
+
+# Install NGINX on Arch Linux
 
 ![nginx](/img/nginx.webp)
 
