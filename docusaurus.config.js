@@ -16,7 +16,7 @@ module.exports = {
     },
     prism: {
       theme: require('prism-react-renderer/themes/dracula'),
-      additionalLanguages: ['nginx'],
+      additionalLanguages: ['nginx','systemd'],
     },
     navbar: {
       title: 'Hogwarts',
