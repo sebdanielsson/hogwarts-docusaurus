@@ -1,12 +1,7 @@
 ---
 slug: install-yay-on-arch-linux
 tags: [yay, aur, aur helper, arch, linux, tutorial, guide]
-authors:
-  name: Sebastian
-  title: Writer
-  url: https://github.com/SebDanielsson
-  image_url: /img/sebastian.webp
-  email: sebastian.danielsson@pm.me
+authors: sebastian
 ---
 
 # Install yay on Arch Linux

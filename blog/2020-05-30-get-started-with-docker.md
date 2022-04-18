@@ -1,12 +1,7 @@
 ---
 slug: get-started-with-docker
 tags: [docker, container, arch, linux, tutorial, guide]
-authors:
-  name: Sebastian
-  title: Writer
-  url: https://github.com/SebDanielsson
-  image_url: /img/sebastian.webp
-  email: sebastian.danielsson@pm.me
+authors: sebastian
 ---
 
 # Get started with Docker

@@ -1,12 +1,7 @@
 ---
 slug: install-arch-linux
 tags: [arch, linux, install, tutorial, guide]
-authors:
-  name: Sebastian
-  title: Writer
-  url: https://github.com/SebDanielsson
-  image_url: /img/sebastian.webp
-  email: sebastian.danielsson@pm.me
+authors: sebastian
 ---
 
 # Install Arch Linux

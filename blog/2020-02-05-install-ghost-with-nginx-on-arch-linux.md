@@ -1,12 +1,7 @@
 ---
 slug: install-ghost-with-nginx-on-arch-linux
 tags: [ghost, cms, blog, nginx, reverse proxy, arch, linux, tutorial, guide]
-authors:
-  name: Sebastian
-  title: Writer
-  url: https://github.com/SebDanielsson
-  image_url: /img/sebastian.webp
-  email: sebastian.danielsson@pm.me
+authors: sebastian
 ---
 
 # Install Ghost with NGINX on Arch Linux

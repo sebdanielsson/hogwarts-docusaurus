@@ -1,12 +1,7 @@
 ---
 slug: install-wireguard-client-on-arch-linux
 tags: [wireguard, vpn, arch, linux, tutorial, guide]
-authors:
-  name: Sebastian
-  title: Writer
-  url: https://github.com/SebDanielsson
-  image_url: /img/sebastian.webp
-  email: sebastian.danielsson@pm.me
+authors: sebastian
 ---
 
 # Install WireGuard [Client] on Arch Linux
