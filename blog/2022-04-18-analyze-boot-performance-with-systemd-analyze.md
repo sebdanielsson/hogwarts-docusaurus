@@ -1,10 +1,12 @@
 ---
 slug: analyze-boot-performance-with-systemd-analyze
-author: Sebastian
-author_title: Writer
-author_url: https://github.com/SebDanielsson
-author_image_url: /img/sebastian.webp
 tags: [linux, boot, performance, systemd, tutorial, guide]
+authors:
+  name: Sebastian
+  title: Writer
+  url: https://github.com/SebDanielsson
+  image_url: /img/sebastian.webp
+  email: sebastian.danielsson@pm.me
 ---
 
 # Analyze Boot Performance with systemd-analyze
