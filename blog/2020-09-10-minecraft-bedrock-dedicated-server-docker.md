@@ -1,10 +1,12 @@
 ---
 slug: minecraft-bedrock-dedicated-server-docker
-author: Sebastian
-author_title: Writer
-author_url: https://github.com/SebDanielsson
-author_image_url: /img/sebastian.webp
 tags: [docker, container, compose, minecraft, bedrock, dedicated, server, linux, tutorial, guide]
+authors:
+  name: Sebastian
+  title: Writer
+  url: https://github.com/SebDanielsson
+  image_url: /img/sebastian.webp
+  email: sebastian.danielsson@pm.me
 ---
 
 # Start a Minecraft Bedrock Server using Docker

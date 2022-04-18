@@ -6,6 +6,7 @@ authors:
   title: Writer
   url: https://github.com/SebDanielsson
   image_url: /img/sebastian.webp
+  email: sebastian.danielsson@pm.me
 ---
 
 # Install tmux on Arch Linux

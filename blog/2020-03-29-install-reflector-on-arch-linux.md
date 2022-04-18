@@ -1,10 +1,12 @@
 ---
 slug: install-reflector-on-arch-linux
-author: Sebastian
-author_title: Writer
-author_url: https://github.com/SebDanielsson
-author_image_url: /img/sebastian.webp
 tags: [reflector, pacman, mirrors, python, arch, linux, tutorial, guide]
+authors:
+  name: Sebastian
+  title: Writer
+  url: https://github.com/SebDanielsson
+  image_url: /img/sebastian.webp
+  email: sebastian.danielsson@pm.me
 ---
 
 # Install Reflector on Arch Linux
