@@ -14,7 +14,8 @@ Paru is the newest and hottest AUR Helper. From one of the developers of yay and
 **Read more:** [paru - GitHub](https://github.com/Morganamilo/paru)
 
 ## Installation
-```bash
+
+```shell showLineNumbers
 pacman -S --needed base-devel
 git clone https://aur.archlinux.org/paru.git
 cd paru
@@ -22,6 +23,7 @@ makepkg -si
 ```
 
 ## Usage
+
 | Command      | Function                                          |
 | ------------ | ------------------------------------------------- |
 | paru -Ss foo | Searches for package foo on the repos or the AUR. |

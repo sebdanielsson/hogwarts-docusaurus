@@ -18,8 +18,10 @@ There is a new AUR Helper that has got a lot of traction. It's called paru and w
 [yay - GitHub](https://github.com/Jguer/yay)
 
 ## Installation
+
 Do not run `makepkg -si` as root.
-```bash
+
+```shell showLineNumbers
 pacman -S git binutils make gcc fakeroot
 git clone https://aur.archlinux.org/yay-bin.git
 cd yay-bin
@@ -27,6 +29,7 @@ makepkg -si
 ```
 
 ## Usage
+
 | Command      | Function                                           |
 | ------------ | -------------------------------------------------- |
 | yay -Ss foo  | Searches for package foo on the repos or the AUR.  |

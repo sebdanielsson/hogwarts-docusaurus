@@ -15,11 +15,13 @@ This guide will walk through the steps for installing the [Phoronix Test Suite](
 [Phoronix Test Suite - Documentation](https://www.phoronix-test-suite.com/documentation/phoronix-test-suite.html)
 
 ## Installation
-```shell
+
+```shell showLineNumbers
 paru -S phoronix-test-suite
 ```
 
 ## Usage
+
 | Function     | Command                            |
 | ------------ | ---------------------------------- |
 | List tests   | phoronix-test-suite list-tests     |

@@ -13,48 +13,57 @@ Complete guide on how to install Ghost and using NGINX as a reverse proxy to mak
 <!--truncate-->
 
 ## Installation
-```shell
+
+```shell showLineNumbers
 pacman -S nodejs-lts-fermium npm sqlite nginx-mainline certbot certbot-nginx
 npm install ghost-cli@latest -g
 ```
 
 ### Prepare directory
+
 Create a directory to install Ghost to and cd to it
-```shell
+
+```shell showLineNumbers
 mkdir /var/www/`yourdomain.com`
 cd /var/www/`yourdomain.com`
 ```
 
 ### Install Ghost with a sqlite database
-```shell
+
+```shell showLineNumbers
 ghost install —-db=sqlite3
 ```
 
-When asked about URL, enter the full URL to your domain. E.g. https://hogwarts.zone
+When asked about URL, enter the full URL to your domain. E.g. [https://hogwarts.zone](https://hogwarts.zone)
 
 ## Configuration
 
 ### NGINX
-DigitalOcean has provided a tool for configuring your web server over at 
-[nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
+
+DigitalOcean has provided a tool for configuring your web server over at [nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
 
 ### Enable your site in NGINX
+
 If you've generated a config as mentioned above you should be ready to activate your site.
-```shell
+
+```shell showLineNumbers
 cd /etc/nginx
 ln -s sites-available/`yourdomain.com` sites-enabled/`yourdomain.com`
 ```
 
 #### Disable the default site
+
 If you want to disable the default site and create a new one, instead of adding your site to the default webroot, you can disable it by removing the symlink.
-```shell
+
+```shell showLineNumbers
 rm /etc/nginx/sites-enabled/default
 ```
 
 ### Certificate renewal
 
 #### Create a systemd service
-```title="/etc/systemd/system/certbot.service"
+
+```systemd showLineNumbers title="/etc/systemd/system/certbot.service"
 [Unit]
 Description=Let’s Encrypt renewal
 
@@ -64,8 +73,10 @@ ExecStart=/usr/bin/certbot renew —quiet —agree-tos —deploy-hook “systemc
 ```
 
 #### Create a timer
-Make it run twice a day at random times to help reduce load on Let's Encrypt servers
-```title="/etc/systemd/system/certbot.timer"
+
+Make it run twice a day at random times to help reduce load on Let's Encrypt servers.
+
+```systemd showLineNumbers title="/etc/systemd/system/certbot.timer"
 [Unit]
 Description=Twice daily renewal of Let’s Encrypt’s certificates
 
@@ -79,16 +90,19 @@ WantedBy=timers.target
 ```
 
 #### Start and enable the service
-```shell
+
+```shell showLineNumbers
 systemctl start certbot.timer
 systemctl enable certbot.timer
 ```
 
 ### Run NGINX
-```shell
+
+```shell showLineNumbers
 systemctl start nginx
 systemctl enable nginx
 ```
 
 ### Live
+
 Your website should now be live at https://`yourdomain.com`

@@ -16,7 +16,7 @@ Tmux is a terminal multiplexer. This lets you to run multiple terminal sessions 
 
 ## Installation
 
-``` shell
+```shell showLineNumbers
 pacman -S tmux
 ```
 
@@ -24,7 +24,7 @@ pacman -S tmux
 
 The default scrolling behaviour runs through the previous commands instead of scrolling the terminal output. Enable sane scrolling behaviour with this config line.
 
-``` title="~/config/tmux/tmux.conf"
+```showLineNumbers title="~/config/tmux/tmux.conf"
 set -g mouse on
 ```
 
