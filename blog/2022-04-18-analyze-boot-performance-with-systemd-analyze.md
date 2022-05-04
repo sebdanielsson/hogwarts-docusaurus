@@ -16,13 +16,13 @@ systemd comes with a tool for analyzing boot times, called systemd-analyze.
 
 ## Update database
 
-``` shell
+``` shell showLineNumbers
 updatedb
 ```
 
 ## Check current boot time
 
-``` shell
+``` shell showLineNumbers
 systemd-analyze time
 ```
 
@@ -30,7 +30,7 @@ systemd will show the boot time for the kernel, all of the user space processes 
 
 ## List initialize time for all systemd units
 
-``` shell
+``` shell showLineNumbers
 systemd-analyze blame
 ```
 
