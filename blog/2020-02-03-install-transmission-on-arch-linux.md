@@ -67,6 +67,7 @@ systemctl daemon-reload
 ```
 
 #### Checking for errors and testing
+
 ```shell showLineNumbers
 systemctl start transmission.service
 systemctl status transmission.service
