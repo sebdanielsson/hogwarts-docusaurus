@@ -13,12 +13,14 @@ I just tried out Docker for a small project and now I get all the hype around it
 <!--truncate-->
 
 ## Documentation
+
 * [Docker Documentation - Docker Engine](https://docs.docker.com/engine/)
 * [Docker Documentation - Docker Compose](https://docs.docker.com/compose/)
 * [ArchWiki - Docker](https://wiki.archlinux.org/title/Docker)
 
 ## Install
-```bash
+
+```shell showLineNumbers
 pacman -Syu docker docker-compose
 systemctl start docker
 systemctl enable docker
@@ -26,27 +28,28 @@ docker info
 ```
 
 ## Usage
-| Function                   | Command                                               |
-| -------------------------- | ----------------------------------------------------- |
-| Pull image                 | docker pull `image`                                   |
-| Remove image               | docker image rm `image`                               |
-| List images                | docker image ls                                       |
-| Run container              | docker run --name `container` `options` `image`       |
-| List containers            | docker container ls                                   |
-| Stop container             | docker container stop `container`                     |
-| Remove container           | docker container rm `container`                       |
-| Remove inactive containers | docker container prune                                |
-| Switch to container shell  | docker exec -ti `container` /bin/sh                   |
-| Exit container shell       | exit                                                  |
+
+| Function                   | Command                                         |
+| -------------------------- | ----------------------------------------------- |
+| Pull image                 | docker pull `image`                             |
+| Remove image               | docker image rm `image`                         |
+| List images                | docker image ls                                 |
+| Run container              | docker run --name `container` `options` `image` |
+| List containers            | docker container ls                             |
+| Stop container             | docker container stop `container`               |
+| Remove container           | docker container rm `container`                 |
+| Remove inactive containers | docker container prune                          |
+| Switch to container shell  | docker exec -ti `container` /bin/sh             |
+| Exit container shell       | exit                                            |
 | Build image                | docker build --no-cache -t `username`/`image`:`tag` . |
 | Delete stopped containers, networks, images and build cache | docker system prune -a |
+| Delete dangling volumes    | docker volume prune                             |
 
-docker volume prune
+### Docker Compose update images
 
-#### Docker Compose update images
 If you're using Docker compose and want to update the images to the latest versions you can run the following when in the same directroy as `docker-compose.yaml`
 
-```bash
+```shell showLineNumbers
 docker-compose up --force-recreate --build -d
 docker image prune -f
 ```

@@ -14,7 +14,7 @@ Fast and easy tutorial for installing a NGINX web server with HTTP/2 and TLS cer
 
 ## Installation
 
-```shell
+```shell showLineNumbers
 pacman -S nginx-mainline certbot certbot-nginx
 ```
 
@@ -22,14 +22,13 @@ The default page served at [http://127.0.0.1](http://127.0.0.1) is located at `/
 
 ## Configuration
 
-DigitalOcean has provided a tool for configuring your web server over at 
-[nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
+DigitalOcean has provided a tool for configuring your web server over at [nginxconfig.io](https://nginxconfig.io), use it and follow the instructions to create a site. Then proceed with the instructions below.
 
 ### Disable the default site
 
 If you want to disable the default site and create a new one, instead of adding your site to the default webroot, you can disable it by removing the symlink.
 
-```shell
+```shell showLineNumbers
 rm /etc/nginx/sites-enabled/default
 ```
 
@@ -37,7 +36,7 @@ rm /etc/nginx/sites-enabled/default
 
 ### Create a systemd service
 
-```systemd title="/etc/systemd/system/certbot.service"
+```systemd showLineNumbers title="/etc/systemd/system/certbot.service"
 [Unit]
 Description=Let’s Encrypt renewal
 
@@ -50,7 +49,7 @@ ExecStart=/usr/bin/certbot renew —quiet —agree-tos —deploy-hook “systemc
 
 Make it run twice a day at random times to help reduce load on Let's Encrypt servers
 
-```systemd title="/etc/systemd/system/certbot.timer"
+```systemd showLineNumbers title="/etc/systemd/system/certbot.timer"
 [Unit]
 Description=Twice daily renewal of Let’s Encrypt’s certificates
 
@@ -65,17 +64,18 @@ WantedBy=timers.target
 
 ### Start and enable the service
 
-```shell
+```shell showLineNumbers
 systemctl start certbot.timer
 systemctl enable certbot.timer
 ```
 
 ## Run NGINX
 
-```shell
+```shell showLineNumbers
 systemctl start nginx
 systemctl enable nginx
 ```
 
 ## Live
+
 Your website should now be live at https://`yourdomain.com`

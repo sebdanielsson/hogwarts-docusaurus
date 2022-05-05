@@ -15,13 +15,16 @@ This guide will show you how to start a Minecraft Bedrock dedicated server using
 ## Preparations
 
 ### Docker volume
-Create a Docker volume where we will store our server
-```bash
+
+Create a Docker volume where we will store our server.
+
+```shell showLineNumbers
 docker volume create minecraft
 ```
 
 ### docker-compose.yaml
-```yaml title="docker-compose.yaml"
+
+```yaml showLineNumbers title="docker-compose.yaml"
 services:
   minecraft:
     container_name: "minecraft"
@@ -61,17 +64,19 @@ volumes:
 ```
 
 ### server.properties
+
 This Docker Image gives you a bunch of environment variables to configure the `server.properties` config file. Check out this [wiki page](https://minecraft.gamepedia.com/Server.properties#Bedrock_Edition_3) describing all server properties.
 
-
 ### permissions.json
+
 There are three roles: `operator`, `member`, `visitor`. Players are defined by their unique xuid (Xbox User ID) in decimal. You can find players xuid by entering their Xbox Live Gamertag and checking the decimal button on this site:
 [https://cxkes.me/xbox/xuid](https://cxkes.me/xbox/xuid)
 
 After running the container for the first time you should be able to find `permissions.json` at `/var/lib/docker/volumes/minecraft/_data/permissions.json` if you named your volume `minecraft`.
 
-Example:
-```json title="permissions.json"
+#### Example
+
+```json showLineNumbers title="permissions.json"
 [
     {
         "permission": "operator",
@@ -89,6 +94,7 @@ Example:
 ```
 
 ## Start
-```bash
+
+```shell showLineNumbers
 docker-compose up -d
 ```

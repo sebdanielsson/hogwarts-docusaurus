@@ -15,34 +15,40 @@ This is my personal step-by-step guide for installing Arch Linux on x86-64 UEFI 
 ## Pre-installation
 
 ### Keyboard layout
-```bash
+
+```shell showLineNumbers
 loadkeys sv-latin1
 ```
 
 ***More info:*** [console keymap](https://wiki.archlinux.org/index.php/Console_keymap)
 
 ### Pacman mirrors
+
 Edit `/etc/pacman.d/mirrorlist` and uncomment a couple of nearby mirrors.
 
 ***More info:*** [mirrorlist](https://wiki.archlinux.org/index.php/Mirrors)
 
 ### Verify the boot mode
-```bash
+
+```shell showLineNumbers
 ls /sys/firmware/efi/efivars
 ```
+
 "Stuff" should show up.
 
 ***More info:*** [efivars](https://wiki.archlinux.org/index.php/UEFI#UEFI_variables)
 
 ### Test internet connection
-```bash
+
+```shell showLineNumbers
 ping -c 3 archlinux.org
 ```
 
 ***More info:*** [ping](https://wiki.archlinux.org/index.php/Network_configuration#Check_the_connection)
 
 ### Update the system clock
-```bash
+
+```shell showLineNumbers
 timedatectl set-ntp true
 ```
 
@@ -51,22 +57,26 @@ timedatectl set-ntp true
 ### Create and format partitions
 
 #### Find your drive
-```bash
+
+```shell showLineNumbers
 fdisk -l
 ```
 
 ***More info:*** [fdisk](https://wiki.archlinux.org/index.php/Fdisk)
 
 #### Wipe the drive
-```bash
+
+```shell showLineNumbers
 shred --verbose --random-source=/dev/urandom --iterations=1 /dev/`yourdrive`
 ```
-`yourdrive` should be replaced with your storage device, e.g. `sda`
+
+`yourdrive` should be replaced with your storage device, e.g. `sda`.
 
 ***More info:*** [shred](https://wiki.archlinux.org/index.php/Securely_wipe_disk#shred)
 
 #### Create a boot and root partition
-```bash
+
+```shell showLineNumbers
 cfdisk /dev/`yourdrive`
 ```
 
@@ -77,12 +87,14 @@ cfdisk /dev/`yourdrive`
 * New → Partition Size: xxxG → Linux Filesystem
 
 #### List your partitions
-```bash
+
+```shell showLineNumbers
 fdisk -l `yourdrive`
 ```
 
 #### Format the partitions
-```bash
+
+```shell showLineNumbers
 mkfs.fat -F32 /dev/`efipartition`
 mkfs.ext4 /dev/`rootpartition`
 ```
@@ -90,7 +102,8 @@ mkfs.ext4 /dev/`rootpartition`
 ***More info:*** [filesystems](https://wiki.archlinux.org/index.php/File_systems#Types_of_file_systems) | [mkfs.fat](https://jlk.fjfi.cvut.cz/arch/manpages/man/mkfs.fat.8.en) | [mkfs.ext4](https://jlk.fjfi.cvut.cz/arch/manpages/man/mke2fs.8)
 
 #### Mount the partitions
-```bash
+
+```shell showLineNumbers
 mount /dev/`rootpartition` /mnt
 mkdir /mnt/boot
 mount /dev/`efipartition` /mnt/boot
@@ -99,7 +112,8 @@ mount /dev/`efipartition` /mnt/boot
 ***More info:*** [mount](https://wiki.archlinux.org/index.php/Mount)
 
 ## Installation
-```bash
+
+```shell showLineNumbers
 pacstrap /mnt base base-devel linux linux-firmware dhcpcd efibootmgr grub inetutils lvm2 man-db man-pages nano netctl sudo sysfsutils texinfo usbutils vi which
 ```
 
@@ -108,15 +122,18 @@ pacstrap /mnt base base-devel linux linux-firmware dhcpcd efibootmgr grub inetut
 ## Configure the system
 
 ### Fstab
-```bash
+
+```shell showLineNumbers
 genfstab -U /mnt >> /mnt/etc/fstab
 ```
 
 ***More info:*** [fstab](https://wiki.archlinux.org/index.php/Fstab)
 
 ### Chroot
+
 This will change the root directory to our new installation.
-```bash
+
+```shell showLineNumbers
 arch-chroot /mnt
 ```
 
@@ -125,14 +142,16 @@ arch-chroot /mnt
 ### Time
 
 #### Set time zone
-```bash
+
+```shell showLineNumbers
 ln -sf /usr/share/zoneinfo/Europe/Stockholm /etc/localtime
 ```
 
-***More info:*** [time zone](https://wiki.archlinux.org/index.php/Time_zone) 
+***More info:*** [time zone](https://wiki.archlinux.org/index.php/Time_zone)
 
 #### Set the hardware clock
-```bash
+
+```shell showLineNumbers
 hwclock --systohc --utc
 ```
 
@@ -141,22 +160,28 @@ hwclock --systohc --utc
 ### Localization
 
 #### Generate locales
+
 Edit `/etc/locale.gen` and uncomment `en_US.UTF-8 UTF-8`.
-```
+
+```shell showLineNumbers
 locale-gen
 ```
 
-***More info:*** [localizations](https://wiki.archlinux.org/index.php/Localization) 
+***More info:*** [localizations](https://wiki.archlinux.org/index.php/Localization)
 
 #### Set system language
-```bash title="/etc/locale.conf"
+
+```shell showLineNumbers title="/etc/locale.conf"
 LANG=en_US.UTF-8
 ```
+
 ***More info:*** [locale.conf](https://jlk.fjfi.cvut.cz/arch/manpages/man/locale.conf.5)
 
 #### Set keyboard layout
-For a Swedish keyboard layout, the file should contain: `KEYMAP=sv-latin1`
-```bash title="/etc/vconsole.conf"
+
+For a Swedish keyboard layout, the file should contain: `KEYMAP=sv-latin1`.
+
+```shell showLineNumbers title="/etc/vconsole.conf"
 KEYMAP=sv-latin1
 ```
 
@@ -165,15 +190,18 @@ KEYMAP=sv-latin1
 ### Network
 
 #### Hostname
+
 This file should only contain the hostname for this device
-```bash title="/etc/hostname"
+
+```shell showLineNumbers title="/etc/hostname"
 yourhostname
 ```
 
 ***More info:*** [hostname](https://wiki.archlinux.org/index.php/Hostname)
 
 #### Hosts
-```bash title="/etc/hosts"
+
+```shell showLineNumbers title="/etc/hosts"
 127.0.0.1 localhost
 ::1 localhost
 127.0.1.1 myhostname.localdomain myhostname
@@ -185,51 +213,61 @@ yourhostname
 ***More info:*** [hosts(5)](https://jlk.fjfi.cvut.cz/arch/manpages/man/hosts.5)
 
 #### DHCP
-To get network access we need to enable `dhcpcd.service`
-```bash
+
+To get network access we need to enable `dhcpcd.service`.
+
+```shell showLineNumbers
 systemctl enable dhcpcd.service
 ```
 
 ***More info:*** [network managers](https://wiki.archlinux.org/index.php/Network_configuration#Network_managers) | [dhcpcd](https://wiki.archlinux.org/index.php/Dhcpcd)
 
 ### Root password
-```bash
+
+```shell showLineNumbers
 passwd
 ```
 
 ***More info:*** [password](https://wiki.archlinux.org/index.php/Password)
 
 ### Bootloader
-```bash
+
+```shell showLineNumbers
 grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch_grub
 ```
 
 ***More info:*** [GRUB](https://wiki.archlinux.org/index.php/GRUB) | [UEFI](https://wiki.archlinux.org/index.php/Unified_Extensible_Firmware_Interface) | [grub](https://www.archlinux.org/packages/?name=grub) | [efibootmgr](https://www.archlinux.org/packages/?name=efibootmgr)
 
 ### Microcode
+
 Depending on your CPU you need to install the latest microcode.
-```bash
+
+```shell showLineNumbers
 pacman -S <intel-ucode or amd-ucode>
 ```
 
 ***More info:*** [Microcode](https://wiki.archlinux.org/index.php/Microcode) | [intel-ucode](https://www.archlinux.org/packages/?name=intel-ucode) | [amd-ucode](https://www.archlinux.org/packages/?name=amd-ucode)
 
 ### GRUB
-```bash
+
+```shell showLineNumbers
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ***More info:*** [GRUB](https://wiki.archlinux.org/index.php/GRUB)
 
 ### Exit chroot
-```bash
+
+```shell showLineNumbers
 exit
 ```
 
 ## Finish
 
 ### Reboot
+
 Reboot your system and remove your installation media.
-```bash
+
+```shell showLineNumbers
 reboot
 ```

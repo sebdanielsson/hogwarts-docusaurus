@@ -14,19 +14,20 @@ This guide show you how to install Transmission on Arch Linux and configure it w
 
 ## Installation
 
-```bash
+```shell showLineNumbers
 pacman -S transmission-cli
 ```
 
 ## Configuration
 
-**Generate config file**
-```bash
+### Generate config file**
+
+```shell showLineNumbers
 systemctl start transmission.service
 systemctl stop transmission.service
 ```
 
-**Edit the config file**
+### Edit the config file**
 
 * Make sure Transmission is not running when making changes to this file, otherwise the changes won't save.
 * The last line shall not end with a comma!
@@ -34,7 +35,7 @@ systemctl stop transmission.service
 * If you want a kill switch, enter your local VPN IP on line `”bind-address-ipv4”: ”*.*.*.*”,`. Transmission will only download/upload through this IP. If the VPN connection is dropped Transmission will stop all traffic.
 * Below are my recommended changes.
 
-```json title="/var/lib/transmission/.config/transmission-daemon/settings.json"
+```json showLineNumbers title="/var/lib/transmission/.config/transmission-daemon/settings.json"
 ”encryption”: 1,
 ”dht-enabled”: false,
 ”lpd-enabled”: false,
@@ -48,29 +49,33 @@ systemctl stop transmission.service
 ”utp-enabled”: false
 ```
 
-**Change the WebUI theme**
+### Change the WebUI theme
 
-To change theme of the web UI, change the default web root to a directory that the user that's running transmission can access. Add this environmental variable:
-```json title="/lib/systemd/system/multi-user.target.wants/transmission.service"
+To change theme of the web UI, change the default web root to a directory that the user that's running transmission can access. Add the following environmental variable.
+
+```json showLineNumbers title="/lib/systemd/system/multi-user.target.wants/transmission.service"
 [Service]
 Environment=TRANSMISSION_WEB_HOME=/usr/share/transmission
 ```
 
 Put the theme into the folder that you pointed to and you should be all set.
 
-**Reload services**
-```bash
+#### Reload services
+
+```shell showLineNumbers
 systemctl daemon-reload
 ```
 
-**Checking for errors and testing**
-```bash
+#### Checking for errors and testing
+
+```shell showLineNumbers
 systemctl start transmission.service
 systemctl status transmission.service
 ```
 
-**Enable autostart**
-```bash
+#### Enable autostart
+
+```shell showLineNumbers
 systemctl start transmission.service
 systemctl enable transmission.service
 ```

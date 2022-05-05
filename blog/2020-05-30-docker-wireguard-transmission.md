@@ -18,12 +18,13 @@ I just released my first Docker image! It's based on Alpine Linux and runs both 
 * GitHub: [SebDanielsson](https://github.com/SebDanielsson) / [docker-wireguard-transmission](https://github.com/SebDanielsson/docker-wireguard-transmission)
 * Docker Hub: [sebdanielsson](https://hub.docker.com/u/sebdanielsson) / [wireguard-transmission](https://hub.docker.com/r/sebdanielsson/wireguard-transmission)
 
-If you're new to Docker you might want to check out my post "[Get started with Docker](/get-started-with-docker)",  covering the basic commands for administrating images, containers and docker-compose.
+If you're new to Docker you might want to check out my post "[Get started with Docker](/get-started-with-docker)", covering the basic commands for administrating images, containers and docker-compose.
 
 ## Usage
 
 ### docker run
-```
+
+```shell showLineNumbers
 docker run --name wireguard-transmission \
 --privileged \
 -e "USERNAME=transmission" \
@@ -41,7 +42,8 @@ sebdanielsson/wireguard-transmission
 ```
 
 ### docker-compose.yml
-```yaml
+
+```yaml showLineNumbers
 version: '3.7'
 services:
 wireguard-transmission:

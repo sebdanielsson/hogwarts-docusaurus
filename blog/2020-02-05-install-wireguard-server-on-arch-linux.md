@@ -13,28 +13,32 @@ This is a very basic tutorial on how to install WireGuard on Arch Linux to use i
 <!--truncate-->
 
 ## Installation
-```shell
+
+```shell showLineNumbers
 pacman -S wireguard-tools
 ```
 
 ## Configuration
+
 In this tutorial we'll use wg0 as the name for our WireGuard interface. If you already have a WireGuard configuration named wg0, make sure to use another name for this configuration.
 
 ### Server configuration
 
 #### Generate server keys
+
 First up we need to generate our private and public key. The private key should reside in our configuration and the public key will be used by the peers.
 
-```shell
+```shell showLineNumbers
 wg genkey | tee server1-privatekey | wg pubkey > server1-publickey
 ```
 
 Print the keys and copy them for the following configuration.
-```shell
+
+```shell showLineNumbers
 cat server1-privatekey && cat server1-publickey
 ```
 
-```title="/etc/wireguard/wg0.conf"
+```ini showLineNumbers title="/etc/wireguard/wg0.conf"
 [Interface]
 PrivateKey = <SERVER_PRIVATE_KEY>
 Address = 10.0.2.1/24
@@ -56,19 +60,22 @@ AllowedIPs = 10.0.2.3/32
 ```
 
 ### Peer configuration
+
 Peers will need to geneate a private and public key as well. Remember that you and the server and are not supposed to know each other's private key. You only need to exchange the public keys. Generate a private and public key for each peer.
 
-```shell
+```shell showLineNumbers
 wg genkey | tee peer1-privatekey | wg pubkey > peer1-publickey
 ```
 
 #### Peer1 config
+
 Print the keys and copy them for the following configuration.
-```shell
+
+```shell showLineNumbers
 cat peer1-privatekey && cat peer1-publickey
 ```
 
-```title="/etc/wireguard/wg0-peer1.conf"
+```ini showLineNumbers title="/etc/wireguard/wg0-peer1.conf"
 [Interface]
 PrivateKey = <PEER1_PRIVATE_KEY>
 Address = 10.0.2.2/32
@@ -83,12 +90,14 @@ PersistentKeepalive = 25
 ```
 
 #### Peer2 config
+
 Print the keys and copy them for the following configuration.
-```shell
+
+```shell showLineNumbers
 cat peer2-privatekey && cat peer2-publickey
 ```
 
-```title="/etc/wireguard/wg0-peer2.conf"
+```ini showLineNumbers title="/etc/wireguard/wg0-peer2.conf"
 [Interface]
 PrivateKey = <PEER2_PRIVATE_KEY>
 Address = 10.0.2.3/32
@@ -102,32 +111,37 @@ PersistentKeepalive = 25
 ```
 
 ### Share config to peers
+
 For a computer, share the respective peer config file to the user, e.g. with [magic-wormhole](https://github.com/magic-wormhole/magic-wormhole). If they are a mobile user you might want to use qrencode and let them scan a QR code. `cd` to the directory containing the peer config files and generate the QR codes.
-```shell
+
+```shell showLineNumbers
 qrencode -t ansiutf8 < wg0-peer1.conf
 qrencode -t ansiutf8 < wg0-peer2.conf
 ```
 
 ### Enable IPv4 forwarding
-```shell
+
+```shell showLineNumbers
 sysctl -w net.ipv4.ip_forward=1
 ```
 
 Make the change permanent:
-```shell title="/etc/sysctl.d/99-sysctl.conf"
+
+```ini showLineNumbers title="/etc/sysctl.d/99-sysctl.conf"
 net.ipv4.ip_forward = 1
 ```
 
 ## Starting WireGuard
+
 Manually bring up the WireGuard interface and check for any errors.
 
-```bash
+```shell showLineNumbers
 systemctl start wg-quick@wg0
 systemctl status wg-quick@wg0
 ```
 
 You may want to bring up the interface automatically as a service with systemd.
 
-```bash
+```shell showLineNumbers
 systemctl enable wg-quick@wg0
 ```
