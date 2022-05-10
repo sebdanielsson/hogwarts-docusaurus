@@ -44,3 +44,8 @@ html[data-theme=light] {
   --ifm-color-primary-lighter: #7954b6;
   --ifm-color-primary-lightest: #8c6cc0;
 }
+
+/* Temporary fix for misaligned searchbox @cmfcmf/docusaurus-search-local */
+.searchBox_dLyj {
+  padding: 0 !important;
+}
