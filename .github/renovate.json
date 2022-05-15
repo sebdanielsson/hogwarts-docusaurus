@@ -3,3 +3,9 @@
     "config:base"
   ]
 }
+
+{
+  "npm": {
+    "enabled": false
+  }
+}
