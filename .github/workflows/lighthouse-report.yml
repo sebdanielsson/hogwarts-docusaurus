@@ -18,7 +18,7 @@ jobs:
         id: vercel-preview
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
-          max_timeout: 120
+          max_timeout: 300
 
       - name: Audit URLs using Lighthouse
         id: lighthouse_audit
