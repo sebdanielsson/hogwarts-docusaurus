@@ -38,7 +38,7 @@ jobs:
             const links = ${{ steps.lighthouse_audit.outputs.links }}
 
             const formatResult = (res) => Math.round((res * 100))
-            Object.keys(result).forEach(key => result[key] = formatResult(result[key]))
+            Object.keys(result).forEach(key => result[key] = formatResult(result[key]));
 
             const score = res => res >= 90 ? '🟢' : res >= 50 ? '🟠' : '🔴'
 
@@ -55,7 +55,7 @@ jobs:
                 `*Lighthouse ran on [${Object.keys(links)[0]}](${Object.keys(links)[0]})*`
             ].join('\n')
 
-             core.setOutput("comment", comment);
+            core.setOutput("comment", comment);
       - name: Post Lighthouse stats
         id: comment_to_pr
         uses: marocchino/sticky-pull-request-comment@v2.2.0
