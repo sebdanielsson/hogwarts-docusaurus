@@ -1,21 +1,21 @@
-name: Lighthouse CI for Netlify sites
-on: pull_request
+name: Lighthouse Report
+
+on:
+  pull_request_target:
+    branches:
+      - main
+
 jobs:
-  build:
+  lighthouse-report:
+    name: Lighthouse Report
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - name: Checkout
+        uses: actions/checkout@v3
 
-      - uses: actions/setup-node@v3
-        with:
-          node-version-file: '.node-version'
-        run: |
-          yarn install
-          yarn build
-
-      - name: Waiting for 200 from the Vercel Preview
+      - name: Wait for Vercel Preview
         uses: patrickedqvist/wait-for-vercel-preview@v1.2.0
-        id: waitFor200
+        id: vercel-preview
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           max_timeout: 120
@@ -25,8 +25,8 @@ jobs:
         uses: treosh/lighthouse-ci-action@v9
         with:
           urls: |
-            ${{ steps.waitFor200.outputs.url }}
-            ${{ steps.waitFor200.outputs.url }}/contact
+            ${{ steps.vercel-preview.outputs.url }}
+            ${{ steps.vercel-preview.outputs.url }}/contact
           uploadArtifacts: true
 
       - name: GitHub Script
