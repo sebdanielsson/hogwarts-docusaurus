@@ -44,7 +44,7 @@ docker info
 | Build image                | docker build --no-cache -t `username`/`image`:`tag` . |
 | Delete stopped containers, networks, images and build cache | docker system prune -a |
 | Delete dangling volumes    | docker volume prune                             |
-| Rename volume              | docker volume create --name `new_volume` && <br> docker run --rm -it -v `old_volume`:/from -v `new_volume`:/to alpine ash -c "cd /from ; cp -av . /to" && <br> docker volume rm `old_volume` |
+| Rename volume              | docker volume create --name `new_volume` && <br/> docker run --rm -it -v `old_volume`:/from -v `new_volume`:/to alpine ash -c "cd /from ; cp -av . /to" && <br/> docker volume rm `old_volume` |
 
 ### Docker Compose update images
 
