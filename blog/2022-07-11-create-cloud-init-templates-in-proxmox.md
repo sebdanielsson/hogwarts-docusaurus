@@ -83,7 +83,13 @@ qm template {{template-id}}
 Clone the template into a new VM.
 
 ```sh
-qm clone {{template-id}} {{vm-id}} --name {{vm-name}}
+qm clone {{template-id}} {{vm-id}} --name {{vm-name}} --full true
+```
+
+Resize the storage to your liking. New size can be new absolute size or prepend a + before the amount to add that amount storage in addition to current size.
+
+```sh
+qm resize {{vm-id}} scsi0 {{new-size}}
 ```
 
 Start the newly created VM.
