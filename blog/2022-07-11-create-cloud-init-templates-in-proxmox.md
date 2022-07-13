@@ -78,7 +78,7 @@ qm set $TEMPLATE_ID --sshkey ~/.ssh/name_ed25519.pub
 Configure the the password for the default user.
 
 ```sh
-qm set $TEMPLATE_ID --cipassword {{cipassword}}
+qm set $TEMPLATE_ID --cipassword SuperSecretPassword
 ```
 
 Convert the VM into a VM template.
