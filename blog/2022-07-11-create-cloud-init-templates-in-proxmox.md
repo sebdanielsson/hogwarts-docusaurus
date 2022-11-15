@@ -15,14 +15,14 @@ authors: sebastian
 Download an OpenStack compatible cloud image. For example Fedora Cloud Base 36.
 
 ```sh
-wget https://download.fedoraproject.org/pub/fedora/linux/releases/36/Cloud/x86_64/images/Fedora-Cloud-Base-36-1.5.x86_64.qcow2
+wget https://download.fedoraproject.org/pub/fedora/linux/releases/37/Cloud/x86_64/images/Fedora-Cloud-Base-37-1.7.x86_64.qcow2
 ```
 
 Set variables for STORAGE, IMAGE_FILE, TEMPLATE_ID, TEMPLATE_NAME, VM_ID, VM_NAME. Make sure these names and identifiers are unique.
 
 ```sh
 STORAGE='local-lvm'
-IMAGE_FILE='Fedora-Cloud-Base-36-1.5.x86_64.qcow2'
+IMAGE_FILE='Fedora-Cloud-Base-37-1.7.x86_64.qcow2'
 TEMPLATE_ID='1000'
 TEMPLATE_NAME='fedora-template'
 VM_ID='100'
@@ -95,7 +95,7 @@ qm clone $TEMPLATE_ID $VM_ID --name $VM_NAME --full true
 Resize the storage to your liking. New size can be new absolute size or prepend a + before the amount to add that amount storage in addition to current size.
 
 ```sh
-qm resize $VM_ID scsi0 +5G
+qm resize $VM_ID scsi0 +20G
 ```
 
 Add our public SSH key to the VM's `authorized_keys`.
