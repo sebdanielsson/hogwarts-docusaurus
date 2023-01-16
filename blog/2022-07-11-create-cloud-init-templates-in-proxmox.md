@@ -104,6 +104,12 @@ Add our public SSH key to the VM's `authorized_keys`.
 qm set $TEMPLATE_ID --sshkey ~/.ssh/name_ed25519.pub
 ```
 
+Configure the the username for the default user.
+
+```sh
+qm set $TEMPLATE_ID --ciuser 'fedora'
+```
+
 Configure the the password for the default user.
 
 ```sh
