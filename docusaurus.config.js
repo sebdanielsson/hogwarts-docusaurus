@@ -28,8 +28,8 @@ module.exports = {
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/hogwarts-icon-dark.webp',
-  organizationName: 'SebDanielsson', // Usually your GitHub org/user name.
-  projectName: 'hogwarts-docusaurus', // Usually your repo name.
+  organizationName: 'SebDanielsson',
+  projectName: 'hogwarts-docusaurus',
   themeConfig: {
     colorMode: {
       defaultMode: 'dark',
@@ -88,9 +88,7 @@ module.exports = {
   ],
   scripts: [
     {
-      src:
-        'https://plausible.hogwarts.zone/js/plausible.js',
-      async: true,
-    },
+      src: 'https://plausible.hogwarts.zone/js/script.js', defer: true, 'data-domain': 'hogwarts.zone'
+    }
   ],
 };
