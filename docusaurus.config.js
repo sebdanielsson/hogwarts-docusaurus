@@ -46,7 +46,7 @@ module.exports = {
         src: "img/hogwarts-icon-dark.webp",
       },
       items: [
-        { to: "/", label: "Blog", position: "left" },
+        //{ to: "/", label: "Blog", position: "left" },
         //{to: '/landingpage', label: 'Landingpage', position: 'left'},
         //{
         //type: 'doc',
@@ -63,7 +63,7 @@ module.exports = {
           type: "html",
           position: "right",
           value:
-            '<a rel="me" href="https://mastodon.social/@sebbo">Mastodon</a>',
+            '<a rel="me" href="https://mastodon.social/@sebbo" class="navbar__link">Mastodon</a>',
         },
       ],
     },
