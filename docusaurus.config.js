@@ -61,8 +61,9 @@ module.exports = {
           position: "right",
         },
         {
-          html: `<a rel="me" href="https://mastodon.social/@sebbo">Mastodon</a>`,
+          type: "html",
           position: "right",
+          value: `<a rel="me" href="https://mastodon.social/@sebbo">Mastodon</a>`,
         },
       ],
     },
