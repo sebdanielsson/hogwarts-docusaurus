@@ -47,7 +47,6 @@ module.exports = {
       },
       items: [
         { to: "/", label: "Blog", position: "left" },
-        { to: "/contact", label: "Contact", position: "left" },
         //{to: '/landingpage', label: 'Landingpage', position: 'left'},
         //{
         //type: 'doc',
