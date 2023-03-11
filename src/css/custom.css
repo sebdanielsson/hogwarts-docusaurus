@@ -24,17 +24,17 @@
   padding: 0 var(--ifm-pre-padding);
 }
 
-html[data-theme=dark] {
+html[data-theme="dark"] {
   --ifm-background-color: #020c1b;
   --ifm-background-surface-color: #020c1b;
 }
 
-html[data-theme=dark] .footer {
+html[data-theme="dark"] .footer {
   --ifm-footer-background-color: #020c1b;
 }
 
-html[data-theme=light] {
-  --ifm-background-color : #ffffff;
+html[data-theme="light"] {
+  --ifm-background-color: #ffffff;
   --ifm-background-surface-color: #ffffff;
   --ifm-color-primary: #6845a2;
   --ifm-color-primary-dark: #5e3e92;
