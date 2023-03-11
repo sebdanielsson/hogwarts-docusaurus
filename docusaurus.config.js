@@ -1,14 +1,5 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  headTags: [
-    {
-      tagName: "link",
-      attributes: {
-        rel: "me",
-        href: "https://mastodon.social/@sebbo",
-      },
-    },
-  ],
   themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
@@ -69,6 +60,10 @@ module.exports = {
           label: "GitHub",
           position: "right",
         },
+        {
+          html: `<a rel="me" href="https://mastodon.social/@sebbo">Mastodon</a>`,
+          position: "right",
+        },
       ],
     },
   },
@@ -78,7 +73,6 @@ module.exports = {
       {
         docs: {
           sidebarPath: require.resolve("./sidebars.js"),
-          // Please change this to your repo.
           editUrl:
             "https://github.com/SebDanielsson/hogwarts-docusaurus/edit/main/docs/",
         },
