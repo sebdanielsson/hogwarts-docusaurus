@@ -63,7 +63,7 @@ module.exports = {
           type: "html",
           position: "right",
           value:
-            '<a rel="me" href="https://mastodon.social/@sebbo" class="navbar__link">Mastodon</a>',
+            '<a target="_blank" href="https://mastodon.social/@sebbo" rel="me" class="navbar__link">Mastodon</a>',
         },
       ],
     },
