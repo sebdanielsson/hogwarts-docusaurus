@@ -1,17 +1,16 @@
-name: Test deployment
+name: Test build
 
 on:
   pull_request:
-    branches:
-      - main
   workflow_dispatch:
 
 jobs:
-  test-deploy:
-    name: Test deployment
+  test-build:
+    name: Test build
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v3.5.2
+      - name: Checkout Repository
+        uses: actions/checkout@v3.5.2
 
       - name: Setup Node
         uses: actions/setup-node@v3.6.0

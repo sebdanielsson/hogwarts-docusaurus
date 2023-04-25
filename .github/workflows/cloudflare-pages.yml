@@ -1,15 +1,19 @@
-on: [push]
+name: Cloudflare Pages
+
+on:
+  push:
+  workflow_dispatch:
 
 jobs:
-  publish:
+  cloudflare-pages:
+    name: Cloudflare Pages
     runs-on: ubuntu-22.04
     permissions:
       contents: read
       deployments: write
-    name: Publish to Cloudflare Pages
     steps:
-      - name: Checkout
-        uses: actions/checkout@v3
+      - name: Checkout Repository
+        uses: actions/checkout@v3.5.2
 
       - name: Setup Node
         uses: actions/setup-node@v3.6.0
