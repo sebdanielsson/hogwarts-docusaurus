@@ -1,6 +1,6 @@
 /** @type {import('@docusaurus/types').DocusaurusConfig} */
 module.exports = {
-  themes: [
+  /* themes: [
     [
       require.resolve("@easyops-cn/docusaurus-search-local"),
       {
@@ -20,7 +20,7 @@ module.exports = {
         explicitSearchResultPath: false,
       },
     ],
-  ],
+  ], */
   title: "Hogwarts",
   tagline: "Guides for macOS & Linux",
   url: "https://hogwarts.zone",
