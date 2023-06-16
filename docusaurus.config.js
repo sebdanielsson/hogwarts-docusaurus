@@ -26,14 +26,6 @@ module.exports = async function createConfigAsync() {
           src: "img/hogwarts-icon-dark.webp",
         },
         items: [
-          //{ to: "/", label: "Blog", position: "left" },
-          //{to: '/landingpage', label: 'Landingpage', position: 'left'},
-          //{
-          //type: 'doc',
-          //docId: 'intro',
-          //position: 'left',
-          //label: 'Docs',
-          //},
           {
             href: "https://github.com/sebdanielsson",
             label: "GitHub",
@@ -60,7 +52,6 @@ module.exports = async function createConfigAsync() {
           blog: {
             routeBasePath: "/",
             showReadingTime: false,
-            // Please change this to your repo.
             editUrl:
               "https://github.com/SebDanielsson/hogwarts-docusaurus/edit/main/",
           },
