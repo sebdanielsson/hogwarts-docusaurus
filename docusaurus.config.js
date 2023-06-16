@@ -16,7 +16,7 @@ module.exports = async function createConfigAsync() {
         respectPrefersColorScheme: true,
       },
       prism: {
-        darkTheme: (await import("./src/utils/prismDark.mjs")).default,
+        //theme: require("prism-react-renderer").themes.dracula,
         additionalLanguages: ["nginx", "systemd"],
       },
       navbar: {
