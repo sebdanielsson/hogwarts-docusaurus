@@ -105,4 +105,4 @@ systemctl enable nginx
 
 ### Live
 
-Your website should now be live at <https://yourdomain.com>
+Your website should now be live at [https://yourdomain.com](https://yourdomain.com).
