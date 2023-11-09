@@ -18,7 +18,7 @@ const config: Config = {
       'classic',
       {
         docs: {
-          sidebarPath: ["./sidebars.ts"],
+          sidebarPath: './sidebars.ts',
           editUrl:
             "https://github.com/SebDanielsson/hogwarts-docusaurus/edit/main/docs/",
         },
