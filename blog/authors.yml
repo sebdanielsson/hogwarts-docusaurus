@@ -1,6 +1,9 @@
 sebastian:
   name: Sebastian
   title: Writer
-  url: https://github.com/SebDanielsson
+  url: https://sebbo.io
   image_url: /img/sebastian.webp
   email: sebastian.danielsson@proton.me
+  socials:
+    linkedin: sebastiandanielsson
+    github: sebdanielsson
