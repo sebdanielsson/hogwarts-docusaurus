@@ -35,7 +35,7 @@
     "@docusaurus/types": "^3.5.2",
     "@eslint/js": "^9.11.1",
     "@types/eslint__js": "^8.42.3",
-    "eslint": "^8.57.0",
+    "eslint": "^9.0.0",
     "prettier": "^3.3.3",
     "prettier-plugin-tailwindcss": "^0.6.8",
     "stylelint": "^16.9.0",
