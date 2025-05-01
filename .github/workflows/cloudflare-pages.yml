@@ -15,25 +15,25 @@ jobs:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: oven-sh/setup-bun@v2
         with:
-          node-version-file: '.node-version'
+          bun-version-file: '.bun-version'
+          no-cache: true
 
       - name: Install dependencies
-        run: npm ci
+        run: bun install
 
       - name: Run Prettier
-        run: npm run prettier:check
+        run: bun --bun run prettier:check
 
       - name: Run ESLint
-        run: npm run lint
+        run: bun --bun run lint
 
       - name: Run stylelint
-        run: npm run stylelint
+        run: bun --bun run stylelint
 
       - name: Build website
-        run: npm run build
+        run: bun --bun run build
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
