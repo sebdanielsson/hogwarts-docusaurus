@@ -26,7 +26,8 @@
     "clsx": "^2.1.1",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.1.0",
-    "react-dom": "^19.1.0"
+    "react-dom": "^19.1.0",
+    "webpack-dev-server": "^5.2.2"
   },
   "devDependencies": {
     "@docusaurus/eslint-plugin": "3.8.1",
