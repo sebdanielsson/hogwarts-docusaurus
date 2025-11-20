@@ -13,7 +13,7 @@ jobs:
     runs-on: ubuntu-24.04-arm
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Dependency Review
         uses: actions/dependency-review-action@v4
