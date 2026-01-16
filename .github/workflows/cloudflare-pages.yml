@@ -1,7 +1,14 @@
 name: Cloudflare Pages
+permissions:
+  contents: read
 
 on:
   push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
   workflow_dispatch:
 
 jobs:
@@ -12,19 +19,17 @@ jobs:
       contents: read
       deployments: write
     steps:
-      - name: Checkout Repository
+      - name: Checkout repository
         uses: actions/checkout@v6
 
-      - uses: oven-sh/setup-bun@v2
-        with:
-          bun-version-file: '.bun-version'
-          no-cache: true
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v2
 
       - name: Install dependencies
         run: bun install
 
-      - name: Run Prettier
-        run: bun --bun run prettier:check
+      - name: Run format check
+        run: bun --bun run format:check
 
       - name: Run ESLint
         run: bun --bun run lint
@@ -32,7 +37,7 @@ jobs:
       - name: Run stylelint
         run: bun --bun run stylelint
 
-      - name: Build website
+      - name: Build project
         run: bun --bun run build
 
       - name: Publish to Cloudflare Pages
